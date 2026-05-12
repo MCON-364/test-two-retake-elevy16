@@ -82,7 +82,7 @@ public class ParallelReportBuilder {
             throws InterruptedException, ExecutionException, IllegalArgumentException {
 
         // TODO 2A: validate inputs where appropriate
-        if (batches == null || batches.isEmpty()) {
+        if (batches == null || batches.isEmpty() || workers <= 0) {
             throw new IllegalArgumentException();
         }
 

@@ -104,8 +104,8 @@ public class TaskDispatcher {
             return new ArrayList<>(results);
         } finally {
             lock.unlock();
+            return List.copyOf(results);
         }
-
     }
 
     public int getCompletedCount() {
